@@ -7,7 +7,7 @@ development:
   timeout: 5000
   host: localhost
 
-test:
+test: &test
   adapter: postgresql
   database: sample_app_test
   username: bnar
@@ -24,3 +24,5 @@ production:
   pool: 5
   timeout: 5000
   host: localhost
+cucumber:
+  <<: *test
